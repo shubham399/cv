@@ -29,7 +29,7 @@ export const RESUME_DATA = {
   about:
     "Senior Software Engineer | CTF Player | Hacker",
   summary:
-    "Seasoned software engineer with expertise in end-to-end development. Demonstrated success in optimizing intricate systems, overhauling payment application, and elevating user experiences through inventive solutions.",
+    "Seasoned software engineer with expertise in end-to-end development cycle. Demonstrated success in optimizing intricate systems, overhauling payment applications, and elevating user experiences through inventive solutions.",
   avatarUrl: "https://avatars.githubusercontent.com/u/17530162?v=4",
   personalWebsiteUrl: "https://shubhkumar.in",
   contact: {
@@ -76,7 +76,7 @@ export const RESUME_DATA = {
       start: "2021",
       end: "Present",
       description:
-        "Experienced Senior Software Developer adept at designing and optimizing complex systems. Specialized in end-to-end development, I've enhanced offline Payments Applications with online verification, developed a versatile Remote Sync Service for content synchronization, and refactored ADS-B Services for seamless event communication. Proficient in ACDC service for remote content syncing, I've also contributed to improving email accessibility via satellite, restricting it to text-only, and significantly boosting Captive portal launch rates from 50% to over 75%."
+        "As a seasoned Software Developer with proficiency in designing and optimizing intricate systems, I have augmented offline Payments Applications by introducing online verification capabilities when internet connectivity is present. This enhancement has led to a noteworthy increase in Captive portal launch rates, elevating them from 50% to over 75%. Additionally, I have successfully developed a versatile Remote Sync Service dedicated to content synchronization and executed a comprehensive refactoring of ADS-B Services to ensure seamless event communication. Furthermore, I have played a pivotal role in enhancing email accessibility via satellite by implementing restrictions to text-only formats."
     },
     {
       company: "Juspay",
