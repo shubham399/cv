@@ -99,7 +99,13 @@ export default function Page() {
           </p>
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Work Experience</h2>
+          <span className="flex items-center justify-between gap-x-2 text-base">
+            <h2 className="text-xl font-bold">Work Experience
+            </h2>
+            <div className="text-sm tabular-nums text-gray-500">
+              {RESUME_DATA.work.reduce((acc, work) => acc + (parseInt(work.end || new Date().getFullYear().toString()) - parseInt(work.start)), 0)}+ Year of Experience
+            </div>
+          </span>
           {RESUME_DATA.work.map((work) => {
             return (
               <Card key={work.company}>
@@ -123,7 +129,7 @@ export default function Page() {
                       </span>
                     </h3>
                     <div className="text-sm tabular-nums text-gray-500">
-                      {work.start} - {work.end}
+                      {work.start} - {work.end || "Present"}
                     </div>
                   </div>
 

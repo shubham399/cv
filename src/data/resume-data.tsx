@@ -74,7 +74,7 @@ export const RESUME_DATA = {
       title: "Senior Software Engineer",
       logo: ParabolLogo,
       start: "2021",
-      end: "Present",
+      end: null,
       description:
         "As a seasoned Software Developer with proficiency in designing and optimizing intricate systems, I have augmented offline Payments Applications by introducing online verification capabilities when internet connectivity is present. This enhancement has led to a noteworthy increase in Captive portal launch rates, elevating them from 50% to over 75%. Additionally, I have successfully developed a versatile Remote Sync Service dedicated to content synchronization and executed a comprehensive refactoring of ADS-B Services to ensure seamless event communication. Furthermore, I have played a pivotal role in enhancing email accessibility via satellite by implementing restrictions to text-only formats."
     },
