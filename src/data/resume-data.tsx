@@ -29,7 +29,7 @@ export const RESUME_DATA = {
   about:
     "Senior Software Engineer | CTF Player | Hacker",
   summary:
-    "Experienced Senior Software Engineer specializing in end-to-end development. Proven track record includes optimizing complex systems, revamping payment backends, and enhancing user experiences through innovative solutions.    ",
+    "Seasoned software engineer with expertise in end-to-end development. Demonstrated success in optimizing intricate systems, overhauling payment application, and elevating user experiences through inventive solutions.",
   avatarUrl: "https://avatars.githubusercontent.com/u/17530162?v=4",
   personalWebsiteUrl: "https://shubhkumar.in",
   contact: {
