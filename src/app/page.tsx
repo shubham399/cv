@@ -103,7 +103,7 @@ export default function Page() {
             <h2 className="text-xl font-bold">Work Experience
             </h2>
             <div className="text-sm tabular-nums text-gray-500">
-              {RESUME_DATA.work.reduce((acc, work) => acc + (parseInt(work.end || new Date().getFullYear().toString()) - parseInt(work.start)), 0)}+ Year of Experience
+              {RESUME_DATA.work.reduce((acc, work) => acc + (parseInt(work.end || new Date().getFullYear().toString()) - parseInt(work.start)), 0)}+ Years
             </div>
           </span>
           {RESUME_DATA.work.map((work) => {
