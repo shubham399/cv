@@ -166,6 +166,31 @@ export const RESUME_DATA = {
         href: "https://github.com/shubham399/discord-role-management-htb",
       },
     },
-
   ],
+  certifications: [
+    {
+      title: "Google Cybersecurity",
+      description: "Google Cybersecurity Professional Certifications",
+      tags: [],
+      link: {
+        href: "https://www.coursera.org/account/accomplishments/specialization/9FYU7RQDJGJ5"
+      }
+    },
+    {
+      title: "Understanding CouchDB 3",
+      description: "Understanding CouchDB 3: Learn Basic & Advanced NoSQL Skills",
+      tags: [],
+      link: {
+        href: "https://ude.my/UC-3e1c81c6-5f18-47a8-b801-61f298f02731"
+      }
+    },
+    {
+      title: "Bash Scripting",
+      description: "Bash Scripting and Shell Programming (Linux Command Line)",
+      tags: [],
+      link: {
+        href: "https://ude.my/UC-80a8dd92-3c5e-4bdb-ab53-215d1e220f49"
+      }
+    }
+  ]
 } as const;
