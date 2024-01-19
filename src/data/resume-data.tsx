@@ -83,10 +83,11 @@ export const RESUME_DATA = {
       end: "2021",
       description:
         [
+          "Core Member of the team, responsible for designing and implementing the payout system",
           "Revamped CRED app's payment backend in PureScript, slashing payout time from 1 minute to 6 seconds",
           "Enabling seamless credit card transactions",
           "Generic fulfillment for various financial operations",
-          "Implemented a RESTful crypto service with secure key storage for encryption and signing"
+          "Implemented BillPayment Service for HPGas on Google Pay."
         ]
 
     },
