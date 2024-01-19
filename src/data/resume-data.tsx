@@ -10,7 +10,7 @@ import { GlobeIcon } from "lucide-react";
 export const RESUME_DATA = {
   name: "Shubham Kumar",
   initials: "SK",
-  location: "Bengaluru, India, IST",
+  location: "Koramangala, Bengaluru, India, IST",
   locationLink: "https://www.google.com/maps/place/Bengaluru",
   about:
     "Senior Software Engineer | CTF Player | Hacker",
