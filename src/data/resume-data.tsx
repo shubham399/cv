@@ -60,6 +60,7 @@ export const RESUME_DATA = {
       title: "Senior Software Engineer",
       logo: ParabolLogo,
       start: "2021",
+      skip: false,
       end: null,
       description: [
         "Proficiency in designing and optimizing intricate systems.",
@@ -70,8 +71,6 @@ export const RESUME_DATA = {
         "Pivotal role in enhancing email accessibility via satellite.",
         "Implementation of restrictions to text-only formats for improved email accessibility."
       ]
-
-      // "As a seasoned Software Developer with proficiency in designing and optimizing intricate systems, I have augmented offline Payments Applications by introducing online verification capabilities when internet connectivity is present. This enhancement has led to a noteworthy increase in Captive portal launch rates, elevating them from 50% to over 75%. Additionally, I have successfully developed a versatile Remote Sync Service dedicated to content synchronization and executed a comprehensive refactoring of ADS-B Services to ensure seamless event communication. Furthermore, I have played a pivotal role in enhancing email accessibility via satellite by implementing restrictions to text-only formats."
     },
     {
       company: "Juspay",
@@ -79,6 +78,7 @@ export const RESUME_DATA = {
       badges: ["Onsite"],
       title: "Software Developer",
       logo: ClevertechLogo,
+      skip: false,
       start: "2018",
       end: "2021",
       description:
@@ -88,9 +88,22 @@ export const RESUME_DATA = {
           "Generic fulfillment for various financial operations",
           "Implemented a RESTful crypto service with secure key storage for encryption and signing"
         ]
-      // ["Point 3", "point 4"]
 
-      // "Revamped CRED app's payment backend in PureScript, slashing payout time from 1 minute to 6 seconds, enabling seamless credit card transactions, generic fulfillment for various financial operations, and implemented a RESTful crypto service with secure key storage for encryption and signing.",
+    },
+    {
+      company: "Juspay",
+      link: "https://juspay.in",
+      badges: ["Onsite"],
+      title: "Software Developer Intern",
+      logo: ClevertechLogo,
+      start: "2017",
+      skip: true,
+      end: "2018",
+      description:
+        [
+          "Implemented a RESTful crypto service with secure key storage for encryption and signing"
+        ]
+
     }
   ],
   skills: [
