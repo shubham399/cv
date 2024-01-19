@@ -61,8 +61,17 @@ export const RESUME_DATA = {
       logo: ParabolLogo,
       start: "2021",
       end: null,
-      description:
-        "As a seasoned Software Developer with proficiency in designing and optimizing intricate systems, I have augmented offline Payments Applications by introducing online verification capabilities when internet connectivity is present. This enhancement has led to a noteworthy increase in Captive portal launch rates, elevating them from 50% to over 75%. Additionally, I have successfully developed a versatile Remote Sync Service dedicated to content synchronization and executed a comprehensive refactoring of ADS-B Services to ensure seamless event communication. Furthermore, I have played a pivotal role in enhancing email accessibility via satellite by implementing restrictions to text-only formats."
+      description: [
+        "Proficiency in designing and optimizing intricate systems.",
+        "Augmented offline Payments Applications with online verification capabilities in the presence of internet connectivity.",
+        "Noteworthy increase in Captive portal launch rates, from 50% to over 75%.",
+        "Developed a versatile Remote Sync Service for content synchronization.",
+        "Executed comprehensive refactoring of ADS-B Services for seamless event communication.",
+        "Pivotal role in enhancing email accessibility via satellite.",
+        "Implementation of restrictions to text-only formats for improved email accessibility."
+      ]
+
+      // "As a seasoned Software Developer with proficiency in designing and optimizing intricate systems, I have augmented offline Payments Applications by introducing online verification capabilities when internet connectivity is present. This enhancement has led to a noteworthy increase in Captive portal launch rates, elevating them from 50% to over 75%. Additionally, I have successfully developed a versatile Remote Sync Service dedicated to content synchronization and executed a comprehensive refactoring of ADS-B Services to ensure seamless event communication. Furthermore, I have played a pivotal role in enhancing email accessibility via satellite by implementing restrictions to text-only formats."
     },
     {
       company: "Juspay",
@@ -73,7 +82,15 @@ export const RESUME_DATA = {
       start: "2018",
       end: "2021",
       description:
-        "Revamped CRED app's payment backend in PureScript, slashing payout time from 1 minute to 6 seconds, enabling seamless credit card transactions, generic fulfillment for various financial operations, and implemented a RESTful crypto service with secure key storage for encryption and signing.",
+        [
+          "Revamped CRED app's payment backend in PureScript, slashing payout time from 1 minute to 6 seconds",
+          "Enabling seamless credit card transactions",
+          "Generic fulfillment for various financial operations",
+          "Implemented a RESTful crypto service with secure key storage for encryption and signing"
+        ]
+      // ["Point 3", "point 4"]
+
+      // "Revamped CRED app's payment backend in PureScript, slashing payout time from 1 minute to 6 seconds, enabling seamless credit card transactions, generic fulfillment for various financial operations, and implemented a RESTful crypto service with secure key storage for encryption and signing.",
     }
   ],
   skills: [
