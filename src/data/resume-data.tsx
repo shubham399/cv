@@ -11,7 +11,7 @@ export const RESUME_DATA = {
   name: "Shubham Kumar",
   initials: "SK",
   location: "Koramangala, Bengaluru, India, IST",
-  locationLink: "https://www.google.com/maps/place/Bengaluru",
+  locationLink: "https://maps.app.goo.gl/RtSs9YwiKQv8LiBm8",
   about:
     "Senior Software Engineer | CTF Player | Hacker",
   summary:
