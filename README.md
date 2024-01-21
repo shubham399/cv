@@ -1,4 +1,5 @@
-![cv](https://github.com/BartoszJarocki/cv/assets/1017620/79bdb9fc-0b20-4d2c-aafe-0526ad4a71d2)
+![image](https://github.com/shubham399/cv/assets/17530162/06e6499d-cd62-4c0a-853a-6b5145935f8c)
+
 
 # Minimalist CV
 
@@ -61,6 +62,10 @@ Stop the Container
 ```
 docker compose down 
 ```
+
+
+
+[![Better Stack Badge](https://uptime.betterstack.com/status-badges/v1/monitor/109gw.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
 
 # License
 
