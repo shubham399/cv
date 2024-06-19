@@ -8,7 +8,7 @@ import { GlobeIcon } from "lucide-react";
 
 
 export const RESUME_DATA = {
-  cal:"shubhkumar/hire-me",
+  cal: "shubhkumar/hire-me",
   name: "Shubham Kumar",
   initials: "SK",
   location: "Koramangala, Bengaluru, India, IST",
