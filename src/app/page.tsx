@@ -228,6 +228,7 @@ export default function Page() {
             title: socialMediaLink.name,
           })),
         ]}
+        cal={RESUME_DATA.cal}
       />
     </main>
   );

@@ -2,6 +2,8 @@
 
 import * as React from "react";
 
+import { getCalApi } from "@calcom/embed-react";
+
 import {
   CommandDialog,
   CommandEmpty,
@@ -16,20 +18,26 @@ import { CommandIcon } from "lucide-react";
 
 interface Props {
   links: { url: string; title: string }[];
+  cal?: string;
 }
 
-export const CommandMenu = ({ links }: Props) => {
+export const CommandMenu = ({ links, cal }: Props) => {
   const [open, setOpen] = React.useState(false);
+  async function setup() {
+    const cal = await getCalApi({});
+    cal("ui", { "styles": { "branding": { "brandColor": "#ffffff" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+  };
 
   React.useEffect(() => {
+    setup();
     const down = (e: KeyboardEvent) => {
       if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
         setOpen((open) => !open);
       }
     };
-
     document.addEventListener("keydown", down);
+
     return () => document.removeEventListener("keydown", down);
   }, []);
 
@@ -63,6 +71,22 @@ export const CommandMenu = ({ links }: Props) => {
             >
               <span>Print</span>
             </CommandItem>
+            {cal && (<CommandItem
+              data-cal-link={cal}
+              data-cal-config='{"layout":"month_view"}'
+              onClick={(e) => {
+                console.log("CLICK", e);
+                setOpen(false);
+              }}
+              onSelect={(e) => {
+                console.log("SELECT", e);
+                console.log(c);
+                setOpen(false);
+              }}
+            >
+              <span>Lets Talk</span>
+            </CommandItem>)}
+
           </CommandGroup>
           <CommandGroup heading="Links">
             {links.map(({ url, title }) => (
