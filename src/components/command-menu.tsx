@@ -80,7 +80,6 @@ export const CommandMenu = ({ links, cal }: Props) => {
               }}
               onSelect={(e) => {
                 console.log("SELECT", e);
-                console.log(c);
                 setOpen(false);
               }}
             >
