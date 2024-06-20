@@ -98,7 +98,7 @@ export const CommandMenu = ({ links, cal }: Props) => {
         </CommandList>
       </CommandDialog>
 
-      <div className="w-screen h-screen flex flex-col print:hidden justify-center items-center bg-transparent">
+      <div className="w-screen h-screen print:hidden bg-transparent">
         <CommandDialog open={openCal} onOpenChange={setOpenCal} modal={false} >
           {(cal) && <Cal calLink={cal} style={{ width: "100dhw", height: "100dvh", overflow: "scroll" }} config={{ layout: 'column_view' }} />}
         </CommandDialog>
