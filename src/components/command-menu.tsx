@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { getCalApi } from "@calcom/embed-react";
+import Cal from "@calcom/embed-react";
 
 import {
   CommandDialog,
@@ -23,13 +23,8 @@ interface Props {
 
 export const CommandMenu = ({ links, cal }: Props) => {
   const [open, setOpen] = React.useState(false);
-  async function setup() {
-    const cal = await getCalApi({});
-    cal("ui", { "styles": { "branding": { "brandColor": "#ffffff" } }, "hideEventTypeDetails": false, "layout": "month_view" });
-  };
-
+  const [openCal, setOpenCal] = React.useState(false);
   React.useEffect(() => {
-    setup();
     const down = (e: KeyboardEvent) => {
       if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
@@ -72,14 +67,9 @@ export const CommandMenu = ({ links, cal }: Props) => {
               <span>Print</span>
             </CommandItem>
             {cal && (<CommandItem
-              data-cal-link={cal}
-              data-cal-config='{"layout":"month_view"}'
-              onClick={(e) => {
-                console.log("CLICK", e);
-                setOpen(false);
-              }}
               onSelect={(e) => {
-                console.log("SELECT", e);
+                setOpenCal(true);
+                console.log(openCal)
                 setOpen(false);
               }}
             >
@@ -103,6 +93,11 @@ export const CommandMenu = ({ links, cal }: Props) => {
           <CommandSeparator />
         </CommandList>
       </CommandDialog>
+      <div className="w-screen h-screen flex flex-col justify-center items-center bg-transparent">
+        <CommandDialog open={openCal} onOpenChange={setOpenCal} modal={false} >
+          {(cal) && <Cal calLink={cal} style={{ width: "100dhw", height: "100dvh", overflow: "scroll" }} config={{ layout: 'column_view' }} />}
+        </CommandDialog>
+      </div>
     </>
   );
 };
