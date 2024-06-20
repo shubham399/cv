@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import Cal from "@calcom/embed-react";
+import Cal, { getCalApi } from "@calcom/embed-react";
 
 import {
   CommandDialog,
@@ -25,6 +25,10 @@ export const CommandMenu = ({ links, cal }: Props) => {
   const [open, setOpen] = React.useState(false);
   const [openCal, setOpenCal] = React.useState(false);
   React.useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({});
+      cal("ui", { "theme": "light", "styles": { "branding": { "brandColor": "#000000" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+    })();
     const down = (e: KeyboardEvent) => {
       if (e.key === "j" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
