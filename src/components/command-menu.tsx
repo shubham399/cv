@@ -100,7 +100,7 @@ export const CommandMenu = ({ links, cal }: Props) => {
       </CommandDialog>
 
       <Dialog open={openCal} onOpenChange={setOpenCal} modal={true} >
-        <DialogContent className="max-w-screen print:hidden  max-h-screen overflow-scroll  md:m-2  md:p-4 shadow-lg">
+        <DialogContent className="max-w-screen print:hidden flex justify-center items-center  max-h-screen overflow-scroll  md:m-2  md:p-4 shadow-lg">
           {(cal) && <Cal calLink={cal} style={{ overflow: "scroll", width: "100%" }} config={{ layout: 'column_view' }} />}
         </DialogContent>
       </Dialog>
