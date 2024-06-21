@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/command";
 import { Button } from "./ui/button";
 import { CommandIcon } from "lucide-react";
+import { Dialog, DialogContent } from "./ui/dialog";
 
 interface Props {
   links: { url: string; title: string }[];
@@ -98,11 +99,11 @@ export const CommandMenu = ({ links, cal }: Props) => {
         </CommandList>
       </CommandDialog>
 
-      <div className="w-screen h-screen print:hidden bg-transparent">
-        <CommandDialog open={openCal} onOpenChange={setOpenCal} modal={false} >
-          {(cal) && <Cal calLink={cal} style={{ width: "100dhw", height: "100dvh", overflow: "scroll" }} config={{ layout: 'column_view' }} />}
-        </CommandDialog>
-      </div>
+      <Dialog open={openCal} onOpenChange={setOpenCal} modal={true} >
+        <DialogContent className="max-w-screen print:hidden  max-h-screen overflow-scroll p-2 shadow-lg sm:w-screen sm:h-screen">
+          {(cal) && <Cal calLink={cal} style={{ overflow: "scroll", width: "100%" }} config={{ layout: 'column_view' }} />}
+        </DialogContent>
+      </Dialog>
     </>
   );
 };
