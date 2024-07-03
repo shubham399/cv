@@ -25,7 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
 
-      <body>{children}</body>
+      <body>
+        {children}
+        <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "81cd3bc5c97945c4b8b57909f87a3926"}'></script>
+      </body>
       <Analytics />
       <GoogleTagManager gtmId="G-XG51E8L4ZD" />
       <SpeedInsights />
