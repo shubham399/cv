@@ -123,6 +123,7 @@ export const RESUME_DATA = {
     , "Express"
     , "NestJS"
     , "MongoDB"
+    , "CouchDB"
     , "MySQL"
     , "PostgreSQL"
     , "Heroku"
