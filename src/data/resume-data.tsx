@@ -109,18 +109,31 @@ export const RESUME_DATA = {
     }
   ],
   skills: [
-    "JavaScript",
-    "TypeScript",
-    "Node.js",
-    "Restful",
-    "Haskell",
-    "Purescript",
-    "Postgres",
-    "CouchDB",
-    "MongoDB",
-    "Docker",
-    "Kubernetes",
-    "AWS",
+    "TypeScript"
+    , "JavaScript"
+    , "Git"
+    , "Purescript"
+    , "Haskell"
+    , "GNU Bash"
+    , "VS Code"
+    , "Neovim"
+    , "NextJs"
+    , "TailwindCSS"
+    , "NodeJS"
+    , "Express"
+    , "NestJS"
+    , "MongoDB"
+    , "MySQL"
+    , "PostgreSQL"
+    , "Heroku"
+    , "Render"
+    , "Supabase"
+    , "Google Cloud"
+    , "Amazon Web Services"
+    , "Digital Ocean"
+    , "Docker"
+    , "Kubernetes"
+    , "Linux"
   ],
   projects: [
     {
