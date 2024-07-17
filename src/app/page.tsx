@@ -8,6 +8,7 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
+import Skills from "@/components/skills-card";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -179,13 +180,15 @@ export default function Page() {
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
-            {RESUME_DATA.skills.map((skill) => {
+
+            <Skills skills={RESUME_DATA.skills}/>
+            {/* {.map((skill) => {
               return (
                 <Badge className="print:text-[10px]" key={skill}>
                   {skill}
                 </Badge>
               );
-            })}
+            })} */}
           </div>
         </Section>
 
