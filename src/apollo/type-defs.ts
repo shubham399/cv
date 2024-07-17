@@ -120,7 +120,7 @@ export class Me {
   work: Work[];
 
   @Field(() => [String])
-  skills: string[];
+  skills: object;
 
   @Field(() => [Project])
   projects: Project[];

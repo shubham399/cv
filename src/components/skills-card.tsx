@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
+type TSkill = { icon: string, href: string, alt: string }
+
 // Skills component
 const Skills = ({ skills }: { skills: object }) => {
     return (<section >
@@ -31,7 +33,7 @@ const SkillCategory = ({ title, skillItems }: { title: string, skillItems: any[]
     </Card>)
 }
 
-const SkillItem = ({ icon, href, alt }: { icon: string, href: string, alt: string }) => (
+const SkillItem = ({ icon, href, alt }: TSkill) => (
 
     <a href={href} target="_blank">
         <Image className="rounded-xl max-w-full h-8  w-8 aspect-square" src={icon} alt={alt} height={100} width={100} />
