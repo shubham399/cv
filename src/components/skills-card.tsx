@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 // Skills component
-const Skills = ({ skills }: { skills: any }) => {
+const Skills = ({ skills }: { skills: object }) => {
     return (<section >
         <div className="grid grid-cols-2 gap-2 m-2 justify-around align-middle">
             {Object.entries(skills).map(([title, skillItems]: [string, any[]]) => {
