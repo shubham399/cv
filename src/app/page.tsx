@@ -179,17 +179,7 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Skills</h2>
-          <div className="flex flex-wrap gap-1">
-
-            <Skills skills={RESUME_DATA.skills}/>
-            {/* {.map((skill) => {
-              return (
-                <Badge className="print:text-[10px]" key={skill}>
-                  {skill}
-                </Badge>
-              );
-            })} */}
-          </div>
+          <Skills skills={RESUME_DATA.skills} />
         </Section>
 
         <Section className="scroll-mb-16">
