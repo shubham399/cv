@@ -21,7 +21,7 @@ export default function Page() {
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
-            <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
+            <h1 className="text-2xl font-bold text-[#1d4dd6]">{RESUME_DATA.name}</h1>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground print:text-[12px]">
               {RESUME_DATA.about}
             </p>
@@ -94,14 +94,14 @@ export default function Page() {
           </Avatar>
         </div>
         <Section>
-          <h2 className="text-xl font-bold">About</h2>
+          <h2 className="text-xl font-bold text-[#1d4dd6]">About</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground print:text-[12px]">
             {RESUME_DATA.summary}
           </p>
         </Section>
         <Section>
           <span className="flex items-center justify-between gap-x-2 text-base">
-            <h2 className="text-xl font-bold">Work Experience
+            <h2 className="text-xl font-bold text-[#1d4dd6]">Work Experience
             </h2>
             <div className="text-sm tabular-nums text-gray-500">
               {RESUME_DATA.work.filter(work => !work.skip).reduce((acc, work) => acc + (parseInt(work.end || new Date().getFullYear().toString()) - parseInt(work.start)), 0)}+ Years
@@ -113,7 +113,7 @@ export default function Page() {
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
                     <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline" target="_blank" href={work.link}>
+                      <a className="hover:underline text-[#1d4dd6]" target="_blank" href={work.link}>
                         {work.company}
                       </a>
 
@@ -156,7 +156,7 @@ export default function Page() {
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Education</h2>
+          <h2 className="text-xl font-bold text-[#1d4dd6]">Education</h2>
           {RESUME_DATA.education.map((education) => {
             return (
               <Card key={education.school}>
@@ -178,12 +178,12 @@ export default function Page() {
           })}
         </Section>
         <Section>
-          <h2 className="text-xl font-bold">Skills</h2>
+          <h2 className="text-xl font-bold text-[#1d4dd6]">Skills</h2>
           <Skills skills={RESUME_DATA.skills} />
         </Section>
 
         <Section className="scroll-mb-16">
-          <h2 className="text-xl font-bold">Projects</h2>
+          <h2 className="text-xl font-bold text-[#1d4dd6]">Projects</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => {
               return (
@@ -199,7 +199,7 @@ export default function Page() {
           </div>
         </Section>
         <Section className="scroll-mb-16">
-          <h2 className="text-xl font-bold">Certifications</h2>
+          <h2 className="text-xl font-bold text-[#1d4dd6]">Certifications</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.certifications.map((project) => {
               return (
