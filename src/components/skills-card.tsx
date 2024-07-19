@@ -33,10 +33,19 @@ const SkillCategory = ({ title, skillItems }: { title: string, skillItems: any[]
     </Card>)
 }
 
-const SkillItem = ({ icon, href, alt }: TSkill) => (
 
-    <a href={href} target="_blank">
-        <Image className="rounded-xl max-w-full h-8  w-8 aspect-square" src={icon} alt={alt} height={100} width={100} />
+const SkillItem = ({ icon, href, alt }: { icon: string, href: string, alt: string }) => (
+    <a href={href} target="_blank" className="group relative flex justify-center items-center">
+        <div className="relative">
+            <Image
+                className="w-full h-auto rounded-xl transition-transform duration-300 transform group-hover:scale-150"
+                src={icon}
+                alt={alt}
+                width="0"
+                height="0"
+                sizes="100vw"
+            />
+        </div>
     </a>
 );
 
