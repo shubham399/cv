@@ -177,7 +177,7 @@ export default function Page() {
             );
           })}
         </Section>
-        <Section>
+        <Section className="print:break-before-page print:pt-16">
           <h2 className="text-xl font-bold text-[#1d4dd6]">Skills</h2>
           <Skills skills={RESUME_DATA.skills} />
         </Section>
