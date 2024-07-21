@@ -6,7 +6,7 @@ type TSkill = { icon: string, href: string, alt: string }
 // Skills component
 const Skills = ({ skills }: { skills: object }) => {
     return (<section >
-        <div className="grid grid-cols-2 gap-2 m-2 justify-around align-middle">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 m-2 justify-around align-middle">
             {Object.entries(skills).map(([title, skillItems]: [string, any[]]) => {
                 return <SkillCategory key={title} title={title} skillItems={skillItems} />
             })}
