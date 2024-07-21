@@ -85,6 +85,11 @@ export default function Page() {
                   <span className="underline">{RESUME_DATA.contact.tel}</span>
                 </a>
               ) : null}
+              {RESUME_DATA.personalWebsiteUrl ? (
+                <a href={RESUME_DATA.personalWebsiteUrl}>
+                  <span className="underline">{RESUME_DATA.personalWebsiteUrl}</span>
+                </a>
+              ) : null}
             </div>
           </div>
 
