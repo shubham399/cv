@@ -23,9 +23,9 @@ const SkillCategory = ({ title, skillItems }: { title: string, skillItems: any[]
                 <p>{title}</p>
             </CardTitle>
         </CardHeader>
-        <CardContent className="grid grid-cols-8 gap-4 justify-center items-center">
-            {skillItems.map((skill: any) => (
-                <SkillItem key={skill.skill} href={skill.href} alt={skill.skill} icon={skill.icon} />))
+        <CardContent className="grid grid-cols-4 md:grid-cols-6 gap-2 lg:gap-4 justify-center items-center">
+            {skillItems.map((skill: any, index: number) => (
+                <SkillItem key={index} href={skill.href} alt={skill.skill} icon={skill.icon} />))
 
             }
         </CardContent>
