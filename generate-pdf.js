@@ -25,7 +25,7 @@ async function generatePDF() {
     await page.goto(url, { waitUntil: 'networkidle2' });
 
     // Generate PDF and save it to the public directory
-    const pdfPath = path.join(__dirname, 'public', 'static', 'download.pdf');
+    const pdfPath = path.join(__dirname, 'public', 'static', 'resume.pdf');
     await page.pdf({ path: pdfPath, format: 'A4' });
 
     await browser.close();
