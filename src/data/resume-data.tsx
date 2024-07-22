@@ -265,6 +265,11 @@ export const RESUME_DATA = {
         "href": "https://www.fly.io",
         "icon": "https://fly.io/static/images/brand/brandmark-light.svg",
         "skill": "FlyIO"
+      },
+      {
+        "href": "https://www.netlify.com/",
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Netlify_logo_%282%29.svg/1024px-Netlify_logo_%282%29.svg.png?20230307164604",
+        "skill": "Netlify"
       }
     ]
   },
