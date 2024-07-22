@@ -151,6 +151,11 @@ export const RESUME_DATA = {
         "href": "https://www.postgresql.org/",
         "icon": "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/postgresql-colored.svg",
         "skill": "PostgreSQL"
+      },
+      {
+        "href": "https://redis.io/",
+        "icon": "https://redis.io/wp-content/uploads/2024/04/Logotype.svg",
+        "skill": "Redis"
       }
     ],
     "framework and runtime": [
