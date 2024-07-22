@@ -14,7 +14,7 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 import { Button } from "./ui/button";
-import { CommandIcon } from "lucide-react";
+import { CommandIcon, LucideDownload } from "lucide-react";
 import { Dialog, DialogContent } from "./ui/dialog";
 
 interface Props {
@@ -58,6 +58,13 @@ export const CommandMenu = ({ links, cal }: Props) => {
       >
         <CommandIcon className="my-6 size-6" />
       </Button>
+      <a
+        href="/static/resume.pdf"
+        target="_blank"
+        className="h-10 w-10 px-2 fixed bottom-4 right-16 border border-input bg-background hover:bg-accent hover:text-accent-foreground flex rounded-full shadow-2xl print:hidden"
+      >
+        <LucideDownload  className="size-6 place-self-center"/>
+      </a>
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
         <CommandList>
