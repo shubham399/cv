@@ -17,7 +17,7 @@ const Skills = ({ skills }: { skills: object }) => {
 
 
 const SkillCategory = ({ title, skillItems }: { title: string, skillItems: any[] }) => {
-    return (<Card className="service-item gap-2 flex flex-col flex-wrap capitalize border border-muted p-3">
+    return (<Card className="service-item gap-2 flex flex-col flex-wrap capitalize border border-muted p-3 print:border-none">
         <CardHeader className="">
             <CardTitle className="text-base">
                 <p>{title}</p>
@@ -29,8 +29,8 @@ const SkillCategory = ({ title, skillItems }: { title: string, skillItems: any[]
 
             }
         </CardContent>
-        <CardContent className="print:block hidden p-4">
-            <ul className="list-disc text-sm">
+        <CardContent className="hidden p-2 print:block">
+            <ul className="list-disc text-xs grid grid-cols-2 gap-1 mx-2">
                 {skillItems.map((skill: any, index: number) => (
                     <li key={index}> {skill.skill}</li>))
 
