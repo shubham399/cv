@@ -1,11 +1,9 @@
 const puppeteer = require('puppeteer');
-const { execSync, spawn } = require('child_process');
+const { spawn } = require('child_process');
 const path = require('path');
 
 async function generatePDF() {
     // Build the Next.js application
-    console.log('Building Next.js application...');
-    execSync('npm run build', { stdio: 'inherit' });
 
     // Start the Next.js server
     console.log('Starting Next.js server...');
