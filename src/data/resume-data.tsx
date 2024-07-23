@@ -268,7 +268,7 @@ export const RESUME_DATA = {
       },
       {
         "href": "https://www.fly.io",
-        "icon": "https://fly.io/static/images/brand/brandmark-light.svg",
+        "icon": "https://fly.io/static/images/brand/brandmark.svg",
         "skill": "FlyIO"
       },
       {
