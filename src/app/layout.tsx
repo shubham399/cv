@@ -6,6 +6,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 import React from "react";
 
+
+
 export const metadata: Metadata = {
   title: "CV",
   description: "Resume",
@@ -26,7 +28,7 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
 
       <body>
-        {children}
+          {children}
         <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "81cd3bc5c97945c4b8b57909f87a3926"}'></script>
       </body>
       <Analytics />

@@ -4,19 +4,24 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 type TSkill = { icon: string, href: string, alt: string }
 
 // Skills component
-const Skills = ({ skills }: { skills: object }) => {
-    return (<section >
-        <div className="print:grid-cols-2 print:gap-2  grid grid-cols-1 md:grid-cols-2 gap-2 m-2 justify-around align-middle">
-            {Object.entries(skills).map(([title, skillItems]: [string, any[]]) => {
-                return <SkillCategory key={title} title={title} skillItems={skillItems} />
-            })}
-        </div>
-    </section>)
+const Skills = ({ skills }: { skills: object[] }) => {
+    const allCategories: string[] = skills.map((skill: any) => skill.category)
+    const categories = Array.from(new Set(allCategories));
+
+
+    return (
+        <section>
+            <h3 className="text-2xl text-gray-100 capitalize mb-5">{"Skills"}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 m-2 justify-around align-middle">
+                {categories.map((category: string) => (<SkillCategory key={category} title={category} skillItems={skills} />))}
+            </div>
+        </section>)
 };
 
 
 
 const SkillCategory = ({ title, skillItems }: { title: string, skillItems: any[] }) => {
+    const items = skillItems.filter(skill => skill.category === title);
     return (<Card className="service-item gap-2 flex flex-col flex-wrap capitalize border border-muted p-3 print:border-none">
         <CardHeader className="">
             <CardTitle className="text-base">
@@ -24,8 +29,8 @@ const SkillCategory = ({ title, skillItems }: { title: string, skillItems: any[]
             </CardTitle>
         </CardHeader>
         <CardContent className="grid grid-cols-4 md:grid-cols-6 gap-2 lg:gap-4 justify-center items-center print:hidden">
-            {skillItems.map((skill: any, index: number) => (
-                <SkillItem key={index} href={skill.href} alt={skill.skill} icon={skill.icon} />))
+            {items.map((skill: any, index: number) => (
+                <SkillItem key={index} href={skill.href} alt={skill.skill} icon={skill.icon.light} />))
 
             }
         </CardContent>
