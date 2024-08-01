@@ -13,7 +13,6 @@ import { ProjectCard } from "@/components/project-card";
 import Skills from "@/components/skills-card";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-const queryClient = new QueryClient()
 
 
 export const metadata: Metadata = {
@@ -24,6 +23,11 @@ export const metadata: Metadata = {
 export default async function Page() {
 
   const work = await fetch('https://shubhkumar.in/api/experience', {
+    next: {
+      revalidate: 24 * 60 * 60
+    }
+  }).then(resp => resp.json());
+  const about = await fetch('https://shubhkumar.in/api/me', {
     next: {
       revalidate: 24 * 60 * 60
     }
@@ -49,18 +53,18 @@ export default async function Page() {
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-4 print:grid print:grid-cols-2 print:gap-2">
         <div className="flex items-center justify-between col-start-1 col-span-2">
           <div className="flex-1 space-y-1.5">
-            <h1 className="text-2xl font-bold text-[#1d4dd6] ">{RESUME_DATA.name}</h1>
+            <h1 className="text-2xl font-bold text-[#1d4dd6] ">{about.name}</h1>
             <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground print:text-[12px] col-start-1">
-              {RESUME_DATA.about}
+              {about.about}
             </p>
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
               <a
                 className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
-                href={RESUME_DATA.locationLink}
+                href={about.locationLink}
                 target="_blank"
               >
                 <GlobeIcon className="size-3" />
-                {RESUME_DATA.location}
+                {about.location}
               </a>
             </p>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
@@ -113,23 +117,23 @@ export default async function Page() {
                   <span className="underline">{RESUME_DATA.contact.tel}</span>
                 </a>
               ) : null}
-              {RESUME_DATA.personalWebsiteUrl ? (
-                <a href={RESUME_DATA.personalWebsiteUrl}>
-                  <span className="underline">{RESUME_DATA.personalWebsiteUrl}</span>
+              {about.personalWebsiteUrl ? (
+                <a href={about.personalWebsiteUrl}>
+                  <span className="underline">{about.personalWebsiteUrl}</span>
                 </a>
               ) : null}
             </div>
           </div>
 
           <Avatar className="size-28">
-            <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
-            <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
+            <AvatarImage alt={about.name} src={about.avatarUrl} />
+            <AvatarFallback>{about.initials}</AvatarFallback>
           </Avatar>
         </div>
         <Section className="col-start-1 col-span-2 row-start-2">
           <h2 className="text-xl font-bold text-[#1d4dd6]">About</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground print:text-[12px]">
-            {RESUME_DATA.summary}
+            {about.summary}
           </p>
         </Section>
         <WorkExperice initialWork={work} />
@@ -197,7 +201,7 @@ export default async function Page() {
       <CommandMenu
         links={[
           {
-            url: RESUME_DATA.personalWebsiteUrl,
+            url: about.personalWebsiteUrl,
             title: "Personal Website",
           },
           ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
@@ -205,7 +209,7 @@ export default async function Page() {
             title: socialMediaLink.name,
           })),
         ]}
-        cal={RESUME_DATA.cal}
+        cal={about.cal}
       />
     </main>
   );
