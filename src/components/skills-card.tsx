@@ -7,11 +7,8 @@ type TSkill = { icon: string, href: string, alt: string }
 const Skills = ({ skills }: { skills: object[] }) => {
     const allCategories: string[] = skills.map((skill: any) => skill.category)
     const categories = Array.from(new Set(allCategories));
-
-
     return (
         <section>
-            <h3 className="text-2xl text-gray-100 capitalize mb-5">{"Skills"}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 m-2 justify-around align-middle">
                 {categories.map((category: string) => (<SkillCategory key={category} title={category} skillItems={skills} />))}
             </div>
