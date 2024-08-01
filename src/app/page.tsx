@@ -28,6 +28,11 @@ export default async function Page() {
       revalidate: 24 * 60 * 60
     }
   }).then(resp => resp.json());
+  const certifications = await fetch('https://shubhkumar.in/api/certificates', {
+    next: {
+      revalidate: 24 * 60 * 60
+    }
+  }).then(resp => resp.json());
   const skills = await fetch('https://shubhkumar.in/api/skills', {
     next: {
       revalidate: 24 * 60 * 60
@@ -169,14 +174,14 @@ export default async function Page() {
         <Section className="scroll-mb-16  print:col-start-2">
           <h2 className="text-xl font-bold text-[#1d4dd6]">Certifications</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
-            {RESUME_DATA.certifications.map((project) => {
+            {certifications.map((project: any) => {
               return (
                 <ProjectCard
                   key={project.title}
                   title={project.title}
-                  description={project.description}
-                  tags={project.tags}
-                  link={"link" in project ? project.link.href : undefined}
+                  description={project.description || project.issuer}
+                  tags={project.tags || []}
+                  link={"link" in project ? project.link : undefined}
                 />
               );
             })}
