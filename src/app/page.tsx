@@ -33,6 +33,11 @@ export default async function Page() {
       revalidate: 24 * 60 * 60
     }
   }).then(resp => resp.json());
+  const education = await fetch('https://shubhkumar.in/api/education', {
+    next: {
+      revalidate: 24 * 60 * 60
+    }
+  }).then(resp => resp.json());
   const skills = await fetch('https://shubhkumar.in/api/skills', {
     next: {
       revalidate: 24 * 60 * 60
@@ -130,7 +135,7 @@ export default async function Page() {
         <WorkExperice initialWork={work} />
         <Section className="print:col-start-1 print:col-span-2">
           <h2 className="text-xl font-bold text-[#1d4dd6]">Education</h2>
-          {RESUME_DATA.education.map((education) => {
+          {education.map((education: any) => {
             return (
               <Card key={education.school}>
                 <CardHeader>
