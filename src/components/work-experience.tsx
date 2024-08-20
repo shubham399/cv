@@ -76,7 +76,7 @@ export const WorkExperice = ({ initialWork }: { initialWork: object }) => {
                         {Array.isArray(work.description) ? (
                             <ul className="list-disc leading-none justify-between list-inside">
                                 {work.description.map((desc, index) => (
-                                    <li className="text-pretty font-mono text-sm text-muted-foreground justify-between print:text-[12px]" key={index}>{desc}</li>
+                                    <li className="text-pretty font-mono text-sm text-muted-foreground justify-between print:text-[12px]" key={index}>{desc.trim()}</li>
                                 ))}
                             </ul>
                         ) : (
