@@ -31,7 +31,7 @@ const SkillCategory = ({ title, skillItems }: { title: string, skillItems: any[]
 
             }
         </CardContent>
-        <CardContent className="hidden p-2 print:block">
+        <CardContent className="hidden p-2 print:block  print:text-[12px]">
             <ul className="list-disc text-xs grid grid-cols-2 gap-1 mx-2">
                 {items.map((skill: any, index: number) => (
                     <li key={index}> {skill.skill}</li>))

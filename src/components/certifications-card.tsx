@@ -36,7 +36,7 @@ export function CertificationCard({ title, description, tags, link }: Props) {
           <div className="hidden font-mono text-xs underline print:visible">
             {link?.replace("https://", "").replace("www.", "").replace("/", "")}
           </div>
-          <CardDescription className="font-mono text-xs">
+          <CardDescription className="font-mono text-xs  print:text-[12px]">
             {description}
           </CardDescription>
         </div>
