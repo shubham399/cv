@@ -2,7 +2,6 @@
 import { Badge } from "./ui/badge";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import { Section } from "./ui/section";
-import { useQuery } from "@tanstack/react-query";
 
 
 export interface IExperience {
@@ -19,19 +18,7 @@ export interface IExperience {
 }
 
 
-export const WorkExperice = ({ initialWork }: { initialWork: object }) => {
-    // const { isLoading, data } = useQuery({
-    //     queryKey: ['experience'],
-    //     initialData: initialWork,
-    //     queryFn: async () => {
-    //         const response = await fetch('https://shubhkumar.in/api/experience', {
-    //             next: {
-    //                 revalidate: 24 * 60 * 60
-    //             }
-    //         });
-    //         return await response.json();
-    //     }
-    // });
+export const WorkExperience = ({ initialWork }: { initialWork: object }) => {
     const work = (initialWork as IExperience[])
     return (<Section className={`print:col-start-1 print:col-span-2 print:row-start-3`}>
         <span className="flex items-center justify-between gap-x-2 text-base col-start-1 col-span-1">

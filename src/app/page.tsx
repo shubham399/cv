@@ -8,11 +8,9 @@ import { Section } from "@/components/ui/section";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
-import { WorkExperice } from '@/components/work-experience';
+import { WorkExperience } from '@/components/work-experience';
 import { ProjectCard } from "@/components/project-card";
 import Skills from "@/components/skills-card";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
 
 
 export const metadata: Metadata = {
@@ -136,7 +134,7 @@ export default async function Page() {
             {about.summary}
           </p>
         </Section>
-        <WorkExperice initialWork={work} />
+        <WorkExperience initialWork={work} />
         <Section className="print:col-start-1 print:col-span-2">
           <h2 className="text-xl font-bold text-[#1d4dd6]">Education</h2>
           {education.map((education: any) => {
