@@ -167,7 +167,7 @@ export default async function Page() {
 
         <Section className="print:col-start-1">
           <h2 className="text-xl font-bold text-[#1d4dd6]">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-0 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => {
               return (
                 <ProjectCard
@@ -183,7 +183,7 @@ export default async function Page() {
         </Section>
         <Section className="scroll-mb-16  print:col-start-2">
           <h2 className="text-xl font-bold text-[#1d4dd6]">Certifications</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-0 print:m-0 print:p-0 md:grid-cols-2 lg:grid-cols-3">
             {certifications.map((project: any) => {
               return (
                 <ProjectCard
