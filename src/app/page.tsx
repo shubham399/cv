@@ -21,29 +21,19 @@ export const metadata: Metadata = {
 export default async function Page() {
 
   const work = await fetch('https://shubhkumar.in/api/experience', {
-    next: {
-      revalidate: 24 * 60 * 60
-    }
+    cache: "no-store"
   }).then(resp => resp.json());
   const about = await fetch('https://shubhkumar.in/api/me', {
-    next: {
-      revalidate: 24 * 60 * 60
-    }
+    cache: "no-store"
   }).then(resp => resp.json());
   const certifications = await fetch('https://shubhkumar.in/api/certificates', {
-    next: {
-      revalidate: 24 * 60 * 60
-    }
+    cache: "no-store"
   }).then(resp => resp.json());
   const education = await fetch('https://shubhkumar.in/api/education', {
-    next: {
-      revalidate: 24 * 60 * 60
-    }
+    cache: "no-store"
   }).then(resp => resp.json());
   const skills = await fetch('https://shubhkumar.in/api/skills', {
-    next: {
-      revalidate: 24 * 60 * 60
-    }
+    cache: "no-store"
   }).then(resp => resp.json());
 
   return (
