@@ -3,6 +3,7 @@ const nextConfig = {
     images: {
         remotePatterns: [
             { hostname: "media.licdn.com" },
+            { hostname: "cdn.cutshort.io" },
             { hostname: "avatars.githubusercontent.com" },
             { hostname: "wikimedia.org" },
             { hostname: "upload.wikimedia.org" },
