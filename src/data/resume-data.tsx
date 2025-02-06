@@ -25,22 +25,22 @@ export const RESUME_DATA = {
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/shubham399",
+        url: "https://go.shubhkumar.in/github",
         icon: GitHubIcon,
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/shubham399/",
+        url: "https://go.shubhkumar.in/linkedin",
         icon: LinkedInIcon,
       },
       {
         name: "X",
-        url: "https://x.com/shubhkumar01",
+        url: "https://go.shubhkumar.in/twitter",
         icon: XIcon,
       },
       {
         name: "Connect",
-        url: "https://connect.shubhkumar.in/",
+        url: "https://go.shubhkumar.in/connect",
         icon: GlobeIcon,
       },
     ],
