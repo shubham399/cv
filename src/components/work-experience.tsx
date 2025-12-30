@@ -1,7 +1,9 @@
-'use client;'
+"use client";
+
 import { Badge } from "./ui/badge";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import { Section } from "./ui/section";
+import { useState, useEffect } from "react";
 
 
 export interface IExperience {
@@ -20,12 +22,23 @@ export interface IExperience {
 
 export const WorkExperience = ({ initialWork }: { initialWork: object }) => {
     const work = (initialWork as IExperience[])
+    const [currentYear, setCurrentYear] = useState<number | null>(null);
+    
+    useEffect(() => {
+        setCurrentYear(new Date().getFullYear());
+    }, []);
+    
+    const totalYears = currentYear !== null ? work.filter(work => !work.skip).reduce((acc, work) => {
+        const endYear = work.end ? parseInt(work.end) : currentYear;
+        return acc + (endYear - parseInt(work.start));
+    }, 0) : 0;
+    
     return (<Section className={`print:col-start-1 print:col-span-2 print:row-start-3`}>
         <span className="flex items-center justify-between gap-x-2 text-base col-start-1 col-span-1">
             <h2 className="text-xl font-bold text-[#1d4dd6]">Work Experience
             </h2>
             <div className="text-sm tabular-nums text-gray-500">
-                {work.filter(work => !work.skip).reduce((acc, work) => acc + (parseInt(work.end || new Date().getFullYear().toString()) - parseInt(work.start)), 0)}+ Years
+                {currentYear !== null ? `${totalYears}+ Years` : '...'}
             </div>
         </span>
         {work.map((work) => {
