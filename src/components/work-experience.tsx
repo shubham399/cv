@@ -23,16 +23,16 @@ export interface IExperience {
 export const WorkExperience = ({ initialWork }: { initialWork: object }) => {
     const work = (initialWork as IExperience[])
     const [currentYear, setCurrentYear] = useState<number | null>(null);
-    
+
     useEffect(() => {
         setCurrentYear(new Date().getFullYear());
     }, []);
-    
+
     const totalYears = currentYear !== null ? work.filter(work => !work.skip).reduce((acc, work) => {
         const endYear = work.end ? parseInt(work.end) : currentYear;
         return acc + (endYear - parseInt(work.start));
     }, 0) : 0;
-    
+
     return (<Section className={`print:col-start-1 print:col-span-2 print:row-start-3`}>
         <span className="flex items-center justify-between gap-x-2 text-base col-start-1 col-span-1">
             <h2 className="text-xl font-bold text-[#1d4dd6]">Work Experience
@@ -51,7 +51,18 @@ export const WorkExperience = ({ initialWork }: { initialWork: object }) => {
                                     {work.company}
                                 </a>
 
-                                <span className="inline-flex gap-x-1">
+
+                            </h3>
+                            <div className="text-sm tabular-nums text-gray-500">
+                                {work.start} - {work.end ?? "Present"}
+                            </div>
+                        </div>
+                        <div className="flex items-center justify-between gap-x-2 text-base">
+
+                            <h4 className="font-mono text-sm leading-none print:text-[12px]">
+                                {work.title}
+                            </h4>
+                            <span className="inline-flex gap-x-1">
                                     {work.badges.map((badge) => (
                                         <Badge
                                             variant="secondary"
@@ -62,15 +73,7 @@ export const WorkExperience = ({ initialWork }: { initialWork: object }) => {
                                         </Badge>
                                     ))}
                                 </span>
-                            </h3>
-                            <div className="text-sm tabular-nums text-gray-500">
-                                {work.start} - {work.end ?? "Present"}
-                            </div>
                         </div>
-
-                        <h4 className="font-mono text-sm leading-none print:text-[12px]">
-                            {work.title}
-                        </h4>
                     </CardHeader>
                     <CardContent className="mt-2">
                         {Array.isArray(work.description) ? (
