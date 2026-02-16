@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Badge } from "./ui/badge";
 
 type TSkill = { icon: string, href: string, alt: string }
 
@@ -25,10 +26,13 @@ const SkillCategory = ({ title, skillItems }: { title: string, skillItems: any[]
                 <p>{title}</p>
             </CardTitle>
         </CardHeader>
-        <CardContent className="grid grid-cols-4 md:grid-cols-6 gap-2 lg:gap-4 justify-center items-center print:hidden">
+        <CardContent className="grid grid-cols-4 md:grid-cols-6 gap-4 lg:gap-4 justify-center items-center print:hidden">
             {items.map((skill: any, index: number) => (
-                <SkillItem key={index} href={skill.href} alt={skill.skill} icon={skill.icon.light} />))
+                <SkillItem key={index} href={skill.href} alt={skill.skill} icon={skill.icon.light} />
 
+            )
+
+            )
             }
         </CardContent>
         <CardContent className="hidden p-2 print:block  print:text-[12px]">
@@ -44,21 +48,27 @@ const SkillCategory = ({ title, skillItems }: { title: string, skillItems: any[]
 }
 
 
-const SkillItem = ({ icon, href, alt }: { icon: string, href: string, alt: string }) => (
-    <>
-        <a href={href} target="_blank" className="group relative flex justify-center items-center print:hidden">
-            <div className="relative">
-                <Image
-                    className="print:hidden w-full h-auto rounded-xl transition-transform duration-300 transform group-hover:scale-150"
-                    src={icon}
-                    alt={alt}
-                    width="0"
-                    height="0"
-                    sizes="100vw"
-                />
-            </div>
-        </a>
-    </>
-);
-
+const SkillItem = ({ icon, href, alt }: { icon: string, href: string, alt: string }) => {
+    if (icon === "http://0.0.0.0") {
+        return (<p className="col-span-4 md:col-span-6  text-muted-foreground tex-sm">{alt}</p>);
+    }
+    else {
+        return (
+            <>
+                <a href={href} target="_blank" className="group relative flex justify-center items-center print:hidden">
+                    <div className="relative">
+                        <Image
+                            className="print:hidden w-full h-auto rounded-xl transition-transform duration-300 transform group-hover:scale-150"
+                            src={icon}
+                            alt={alt}
+                            width="0"
+                            height="0"
+                            sizes="100vw"
+                        />
+                    </div>
+                </a>
+            </>
+        )
+    }
+};
 export default Skills;
