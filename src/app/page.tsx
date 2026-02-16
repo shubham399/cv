@@ -149,12 +149,12 @@ export default async function Page() {
             );
           })}
         </Section>
-        <Section className="break-before-page print:col-start-1 print:col-span-2">
+        <Section className="print:col-start-1 print:col-span-2">
           <h2 className="text-xl font-bold text-[#1d4dd6]">Skills</h2>
           <Skills skills={skills} />
         </Section>
 
-        <Section className="print:col-start-1">
+        <Section className="print:hidden">
           <h2 className="text-xl font-bold text-[#1d4dd6]">Projects</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-0 md:grid-cols-2 lg:grid-cols-3">
             {RESUME_DATA.projects.map((project) => {
@@ -170,7 +170,7 @@ export default async function Page() {
             })}
           </div>
         </Section>
-        <Section className="scroll-mb-16  print:col-start-2">
+        <Section className="scroll-mb-16  print:hidden">
           <h2 className="text-xl font-bold text-[#1d4dd6]">Certifications</h2>
           <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-0 print:m-0 print:p-0 md:grid-cols-2 lg:grid-cols-3">
             {certifications.map((project: any) => {
