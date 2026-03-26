@@ -11,7 +11,7 @@ import { WorkExperience } from '@/components/work-experience';
 import { ProjectCard } from "@/components/project-card";
 import Skills from "@/components/skills-card";
 
-
+const API_URL = "https://api.shubhkumar.in";
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
   description: RESUME_DATA.summary,
@@ -19,19 +19,19 @@ export const metadata: Metadata = {
 
 export default async function Page() {
 
-  const work = await fetch('https://shubhkumar.in/api/experience', {
+  const work = await fetch(`${API_URL}/api/experience`, {
     cache: "no-store"
   }).then(resp => resp.json());
-  const about = await fetch('https://shubhkumar.in/api/me', {
+  const about = await fetch(`${API_URL}/api/me`, {
     cache: "no-store"
   }).then(resp => resp.json());
-  const certifications = await fetch('https://shubhkumar.in/api/certificates', {
+  const certifications = await fetch(`${API_URL}/api/certificates`, {
     cache: "no-store"
   }).then(resp => resp.json());
-  const education = await fetch('https://shubhkumar.in/api/education', {
+  const education = await fetch(`${API_URL}/api/education`, {
     cache: "no-store"
   }).then(resp => resp.json());
-  const skills = await fetch('https://shubhkumar.in/api/skills', {
+  const skills = await fetch(`${API_URL}/api/skills`, {
     cache: "no-store"
   }).then(resp => resp.json());
 
