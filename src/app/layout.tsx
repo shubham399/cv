@@ -5,21 +5,15 @@ import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 import React from "react";
+import { fetchAPI } from "@/lib/utils";
 
 
 
 export async function generateMetadata(): Promise<Metadata> {
   let data;
-  const BASE_URL = "https://api.shubhkumar.in";
   try {
-    const res = await fetch(
-      `${BASE_URL}/api/publicmetadata`,
-      {
-        next: { revalidate: 86400 }, // 1 day
-      }
-    );
+    data = await fetchAPI(`/api/publicmetadata`)
 
-    data = await res.json();
   } catch {
     data = {
       title: "Shubham Kumar",
